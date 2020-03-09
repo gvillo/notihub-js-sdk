@@ -1,14 +1,14 @@
 {
-  "name": "notihub-sdk-nodejs",
+  "name": "@notihub/notihub-sdk-js",
   "version": "0.0.1",
-  "description": "Notihub Official Node.js SDK",
-  "main": "index.js",
+  "description": "Notihub Official Javascript SDK",
+  "main": "./dist/notihub-sdk-js.js",
   "author": {
     "name": "Notihub",
     "email": "",
     "url": "https://notihub.io/"
   },
-  "homepage": "https://github.com/gvillo/notihub-sdk-nodejs",
+  "homepage": "https://github.com/gvillo/notihub-sdk-js",
   "contributors": [
     "Gabriel Villoldo <gabrielvilloldo@gmail.com>"
   ],
@@ -22,7 +22,10 @@
   },
 
   "bugs": {
-    "url": "https://github.com/gvillo/notihub-sdk-nodejs/issues"
+    "url": "https://github.com/gvillo/notihub-sdk-js/issues"
   },
 
+  "files": [
+    "dist/notihub-sdk-js.js"
+  ]
 }
