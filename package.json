@@ -2,10 +2,11 @@
   "name": "@notihub/notihub-sdk-js",
   "version": "0.0.1",
   "description": "Notihub Official Javascript SDK",
-  "main": "./dist/notihub-sdk-js.js",
+  "keywords": ["notihub", "javascript", "nodejs", "api"],
+  "main": "index.js",
   "author": {
-    "name": "Notihub",
-    "email": "",
+    "name": "Gabriel Villoldo",
+    "email": "gabrielvilloldo@gmail.com",
     "url": "https://notihub.io/"
   },
   "homepage": "https://github.com/gvillo/notihub-sdk-js",

@@ -1,6 +1,6 @@
-# Notihub SDK for Javascript
+# Notihub SDK for Node.js
 
-The **Notihub SDK for Javascript** enables Javascript developers to easily work with the [Notihub API][notihub] and
+The **Notihub SDK for Node.js** enables Javascript Node.js developers to easily work with the [Notihub API][notihub] and
 build scalable solutions. You can get started in minutes using ***NPM*** or by downloading a [single zip file][download-release].
 
 * [API Docs][docs-api]
@@ -23,15 +23,35 @@ credentials.
 
 #### Install the SDK
 
-Notihub SDK for Javascript use NPM to run.
+Install the SDK using:
 
-`npm install notihub-js-sdk --save`
+`npm install notihub-nodejs-sdk --save`
 
-`import NotihubClient from '@notihub/notihub-js-sdk';`
+Import the package:
+
+```js
+import Notihub from '@notihub/notihub-nodejs-sdk';
+````
+
+or
+
+```js
+const Notihub = require('@notihub/notihub-nodejs-sdk');
+````
 
 #### Usage
 
 This SDK relies heavily on [Promises](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
+
+```js
+    const notihub = new Notihub({
+      publicKey: "<your OAuth2 public key>",
+      secretKey: "<your OAuth2 secret key>",
+      environmentClientId: "<your OAuth2 environment client id>",
+      environmentClientSecret: "<your OAuth2 environment client secret>"
+    });
+```
+
 
 #### Using the API
 
@@ -72,7 +92,7 @@ Please use these community resources for getting help. We use GitHub [issues][sd
 
 [notihub]: https://notihub.io/
 [docs-api]: https://docs.notihub.io/
-[download-release]: https://github.com/gvillo/notihub-sdk-js/releases
+[download-release]: https://github.com/gvillo/notihub-nodejs-sdk/releases
 [changes-file]: ./CHANGELOG.md
 [authentication]: ./docs/authentication.md
 [customers]: ./docs/customers.md
@@ -80,6 +100,6 @@ Please use these community resources for getting help. We use GitHub [issues][sd
 [customer-preferences]: ./docs/customer-preferences.md
 [messages]: ./docs/messages.md
 [signup]: https://dashboard.notihub.io/signup
-[sdk-issues]: https://github.com/gvillo/notihub-sdk-java/issues
-[stack-overflow]: http://stackoverflow.com/questions/tagged/notihub-js-sdk
-[features]: https://github.com/gvillo/notihub-sdk-java/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
+[sdk-issues]: https://github.com/gvillo/notihub-nodejs-sdk/issues
+[stack-overflow]: http://stackoverflow.com/questions/tagged/notihub-nodejs-sdk
+[features]: https://github.com/gvillo/notihub-nodejs-sdk/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
