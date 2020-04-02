@@ -42,12 +42,12 @@ const Notihub = require('@notihub/notihub-nodejs-sdk');
 This SDK relies heavily on [Promises](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
 
 ```js
-    const notihub = new Notihub({
-      publicKey: '<your auth public key>',
-      secretKey: '<your auth secret key>',
-      environmentClientId: '<your auth environment client id>',
-      environmentClientSecret: '<your auth environment client secret>'
-    });
+const notihub = new Notihub({
+  publicKey: '<your auth public key>',
+  secretKey: '<your auth secret key>',
+  environmentClientId: '<your auth environment client id>',
+  environmentClientSecret: '<your auth environment client secret>'
+});
 ```
 
 #### Using the API
