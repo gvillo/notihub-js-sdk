@@ -1,1 +1,1 @@
-module.exports = require('./lib/notihub-client');
+module.exports = require('./lib/notihub');

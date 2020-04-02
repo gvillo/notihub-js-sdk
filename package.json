@@ -1,8 +1,13 @@
 {
-  "name": "@notihub/notihub-sdk-js",
-  "version": "0.0.1",
+  "name": "@notihub/notihub-nodejs-sdk",
+  "version": "0.1.0",
   "description": "Notihub Official Javascript SDK",
-  "keywords": ["notihub", "javascript", "nodejs", "api"],
+  "keywords": [
+    "notihub",
+    "javascript",
+    "nodejs",
+    "api"
+  ],
   "main": "index.js",
   "author": {
     "name": "Gabriel Villoldo",
@@ -21,12 +26,21 @@
     "type": "git",
     "url": "git+https://github.com/gvillo/notihub-sdk-nodejs.git"
   },
-
   "bugs": {
     "url": "https://github.com/gvillo/notihub-sdk-js/issues"
   },
-
   "files": [
     "dist/notihub-sdk-js.js"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "js-base64": "^2.5.2",
+    "node-fetch": "^2.6.0"
+  }
 }
