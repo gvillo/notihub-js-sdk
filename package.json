@@ -15,6 +15,9 @@
     "url": "https://notihub.io/"
   },
   "main": "./dist/dist-src",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "homepage": "https://github.com/gvillo/notihub-nodejs-sdk",
   "contributors": [
     "Gabriel Villoldo <gabrielvilloldo@gmail.com>"
@@ -22,6 +25,7 @@
   "license": "MIT",
   "scripts": {
     "build": "pika build --out dist/",
+    "lint": "xo",
     "test": "echo \"Error: no test specified\" && exit 0",
     "publish": "pika publish --contents=dist/",
     "version": "npm run build"
@@ -34,10 +38,15 @@
     "url": "https://github.com/gvillo/notihub-sdk-js/issues"
   },
   "devDependencies": {
-    "@pika/plugin-standard-pkg": "^0.9.2"
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-standard-pkg": "^0.9.2",
+    "xo": "^0.28.2"
   },
   "dependencies": {
-    "@pika/pack": "^0.5.0",
     "js-base64": "^2.5.2",
     "node-fetch": "^2.6.0"
   },
@@ -45,10 +54,22 @@
     "pipeline": [
       [
         "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
       ]
-    ]
+    ],
+    "modules": false
   },
   "publishConfig": {
     "access": "public"
+  },
+  "xo": {
+    "envs": [
+      "node"
+    ],
+    "ignores": [
+      "dist"
+    ]
   }
 }

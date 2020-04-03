@@ -81,7 +81,9 @@ Please use these community resources for getting help. We use GitHub [issues][sd
 * Articulate your feature request or upvote existing ones on our [Issues][features] page
 * If it turns out that you may have found a bug, please open an [issue][sdk-issues]
 
+## Contribute
 
+Please go to [Contribute section][contribute].
 
 [notihub]: https://notihub.io/
 [docs-api]: https://docs.notihub.io/
@@ -91,6 +93,7 @@ Please use these community resources for getting help. We use GitHub [issues][sd
 [customer-contacts]: ./docs/customer-contacts.md
 [customer-preferences]: ./docs/customer-preferences.md
 [messages]: ./docs/messages.md
+[contribute]: ./contribute.md
 [signup]: https://dashboard.notihub.io/signup
 [sdk-issues]: https://github.com/gvillo/notihub-nodejs-sdk/issues
 [stack-overflow]: http://stackoverflow.com/questions/tagged/notihub-nodejs-sdk

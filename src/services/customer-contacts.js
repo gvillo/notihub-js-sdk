@@ -1,98 +1,95 @@
-const util = require('util');
+import util from 'util';
 
-const api = require('../api');
-const customersUrl = '/customers/%s/contacts/';
+import Api from '../api';
 
-let configuration;
-
-/**
- * Creates a customer
- * @param {object} customerContact object
- * @returns {Promise<object>} customerContact object created from API
- */
-module.exports.create = customerContact => {
-    let error;
-    if (customerContact === undefined) {
-        error = 'CustomerContact object is mandatory. Please fill it.';
+export default class CustomerContacts {
+    constructor(configuration) {
+        this.api = new Api(configuration);
+        this.customersContactUrl = '/customers/%s/contacts/';
     }
-    else {
-        if (customerContact.contactId === undefined) {
-            error = 'ContactId is mandatory in CustomerContact. Please fill it.\n';
+    /**
+     * Creates a customer
+     * @param {object} customerContact object
+     * @returns {Promise<object>} customerContact object created from API
+     */
+    create(customerContact) {
+        let error;
+        if (customerContact === undefined) {
+            error = 'CustomerContact object is mandatory. Please fill it.';
         }
-    }
-    //
-    return new Promise((resolve, reject) => {
-        if (error) {
-            reject(error);
+        else {
+            if (customerContact.contactId === undefined) {
+                error = 'ContactId is mandatory in CustomerContact. Please fill it.\n';
+            }
         }
-        api.post(util.format(customersUrl, customerContact.customerId), customerContact)
-            .then(json => resolve(json))
-            .catch(error => {
+        //
+        return new Promise((resolve, reject) => {
+            if (error) {
                 reject(error);
-            });
-    });
-};
+            }
+            this.api.post(util.format(this.customersContactUrl, customerContact.customerId), customerContact)
+                .then(json => resolve(json))
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    };
 
-/**
- * Updates a customerContact
- * @param {object} customerContact object
- * @returns {Promise<object>} customerContact object updated from API
- */
-module.exports.update = customerContact => {
-    let error;
-    if (customerContact === undefined) {
-        error = 'Customer object is mandatory to create a Customer. Please fill it.';
-    }
-    else {
-        if (customerContact.customerId === undefined) {
-            error = 'CustomerId is mandatory in CustomerContact. Please fill it.\n';
+    /**
+     * Updates a customerContact
+     * @param {object} customerContact object
+     * @returns {Promise<object>} customerContact object updated from API
+     */
+    update( customerContact) {
+        let error;
+        if (customerContact === undefined) {
+            error = 'Customer object is mandatory to create a Customer. Please fill it.';
         }
-        if (customerContact.contactId === undefined) {
-            error = 'ContactId is mandatory in CustomerContact. Please fill it.\n';
+        else {
+            if (customerContact.customerId === undefined) {
+                error = 'CustomerId is mandatory in CustomerContact. Please fill it.\n';
+            }
+            if (customerContact.contactId === undefined) {
+                error = 'ContactId is mandatory in CustomerContact. Please fill it.\n';
+            }
         }
-    }
-    //
-    return new Promise((resolve, reject) => {
-        if (error) {
-            reject(error);
-        }
-        api.put(util.format(customersUrl, customerContact.customerId), customerContact)
-            .then(json => resolve(json))
-            .catch(error => {
+        //
+        return new Promise((resolve, reject) => {
+            if (error) {
                 reject(error);
-            });
-    });
-};
+            }
+            this.api.put(util.format(this.customersContactUrl, customerContact.customerId), customerContact)
+                .then(json => resolve(json))
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    };
 
-/**
- * Deletes a customerContact
- * @param {number} contactId
- * @param {string} customerId
- * @returns {Promise<object>} customerContact object deleted from API
- */
-module.exports.delete = (contactId, customerId) => {
-    let error;
-    if (contactId === undefined) {
-        error = 'ContactId is mandatory to delete a CustomerContact. Please fill it.\n';
-    }
-    if (customerId === undefined) {
-        error = 'CustomerId is mandatory to delete a CustomerContact. Please fill it.\n';
-    }
-    //
-    return new Promise((resolve, reject) => {
-        if (error) {
-            reject(error);
+    /**
+     * Deletes a customerContact
+     * @param {number} contactId
+     * @param {string} customerId
+     * @returns {Promise<object>} customerContact object deleted from API
+     */
+    delete(contactId, customerId) {
+        let error;
+        if (contactId === undefined) {
+            error = 'ContactId is mandatory to delete a CustomerContact. Please fill it.\n';
         }
-        api.delete(util.format(customersUrl, customerId) + contactId)
-            .then(json => resolve(json))
-            .catch(error => {
+        if (customerId === undefined) {
+            error = 'CustomerId is mandatory to delete a CustomerContact. Please fill it.\n';
+        }
+        //
+        return new Promise((resolve, reject) => {
+            if (error) {
                 reject(error);
-            });
-    });
-};
-
-module.exports.setConfig = (config) => {
-    configuration = config;
-    api.setConfig(config);
-    return this;
-};
+            }
+            this.api.delete(util.format(this.customersContactUrl, customerId) + contactId)
+                .then(json => resolve(json))
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    };
+}

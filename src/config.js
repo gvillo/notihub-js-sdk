@@ -4,7 +4,7 @@ let secretKey;
 let environmentClientId;
 let environmentClientSecret;
 
-let configurationModule = module.exports = {};
+let configurationModule = {};
 
 /**
  * Set up configurations globally.
@@ -36,14 +36,6 @@ configurationModule.configure = configuration => {
     host = configuration.host || host;
 };
 
-/**
- * Set environmentClientId
- * @param {string} token
- */
-configurationModule.setEnvironmentClientId = function (token) {
-    environmentClientId = token;
-    return this;
-};
 
 /**
  * Get clientSecret
@@ -53,14 +45,6 @@ configurationModule.getEnvironmentClientId = function () {
     return environmentClientId;
 };
 
-/**
- * Set environmentClientId
- * @param {string} token
- */
-configurationModule.setEnvironmentClientSecret = function (token) {
-    environmentClientSecret = token;
-    return this;
-};
 
 /**
  * Get clientSecret
@@ -71,29 +55,11 @@ configurationModule.getEnvironmentClientSecret = function () {
 };
 
 /**
- * Set publicKey
- * @param {string} token
- */
-configurationModule.setPublicKey = function (token) {
-    publicKey = token;
-    return this;
-};
-
-/**
  * Get publicKey
  * @returns {string}
  */
 configurationModule.getPublicKey = function () {
     return publicKey;
-};
-
-/**
- * Set secretKey
- * @param {string} token
- */
-configurationModule.setSecretKey = function (token) {
-    secretKey = token;
-    return this;
 };
 
 /**
@@ -111,3 +77,5 @@ configurationModule.getSecretKey = function () {
 configurationModule.getHost = function () {
     return host;
 };
+
+export default configurationModule;
