@@ -23,7 +23,7 @@ credentials.
 
 Using npm:
 
-`npm install --save notihub-nodejs-sdk`
+`npm install --save @notihub/notihub-nodejs-sdk`
 
 Import the package:
 
