@@ -9,7 +9,7 @@
     "api",
     "backend"
   ],
-  "main": "index.js",
+  "main": "src/index.js",
   "author": {
     "name": "Gabriel Villoldo",
     "email": "gabrielvilloldo@gmail.com",
@@ -21,7 +21,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pika build --out dist/",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "version": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,18 +32,31 @@
   "bugs": {
     "url": "https://github.com/gvillo/notihub-sdk-js/issues"
   },
-  "files": [
-    "dist/notihub-sdk-js.js"
-  ],
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-formatter-pretty": "^3.0.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-standard-pkg": "^0.9.2"
   },
   "dependencies": {
+    "@pika/pack": "^0.5.0",
     "js-base64": "^2.5.2",
     "node-fetch": "^2.6.0"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "__tests__/**/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-node"
+      ]
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
