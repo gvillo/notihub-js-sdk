@@ -55,5 +55,8 @@
         "@pika/plugin-build-node"
       ]
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
