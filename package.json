@@ -22,6 +22,7 @@
   "scripts": {
     "build": "pika build --out dist/",
     "test": "echo \"Error: no test specified\" && exit 0",
+    "publish": "pika publish --contents=dist/",
     "version": "npm run build"
   },
   "repository": {
@@ -32,7 +33,6 @@
     "url": "https://github.com/gvillo/notihub-sdk-js/issues"
   },
   "devDependencies": {
-    "@pika/plugin-build-node": "^0.9.2",
     "@pika/plugin-standard-pkg": "^0.9.2"
   },
   "dependencies": {
@@ -43,15 +43,7 @@
   "@pika/pack": {
     "pipeline": [
       [
-        "@pika/plugin-standard-pkg",
-        {
-          "exclude": [
-            "__tests__/**/*"
-          ]
-        }
-      ],
-      [
-        "@pika/plugin-build-node"
+        "@pika/plugin-standard-pkg"
       ]
     ]
   },
