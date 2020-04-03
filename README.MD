@@ -1,7 +1,7 @@
 # Notihub SDK for Node.js
 
 The **Notihub SDK for Node.js** enables Javascript Node.js developers to easily work with the [Notihub API][notihub] and
-build scalable solutions. You can get started in minutes using ***NPM***, ***yarn*** or by downloading a [single zip file][download-release].
+build scalable solutions. You can get started in minutes using ***npm*** or ***yarn***.
 
 ## Requirements
 
@@ -23,7 +23,9 @@ credentials.
 
 Using npm:
 
-`npm install --save @notihub/notihub-nodejs-sdk`
+```sh
+npm install --save @notihub/notihub-nodejs-sdk
+```
 
 Import the package:
 
@@ -81,7 +83,7 @@ Please use these community resources for getting help. We use GitHub [issues][sd
 * Articulate your feature request or upvote existing ones on our [Issues][features] page
 * If it turns out that you may have found a bug, please open an [issue][sdk-issues]
 
-## Contribute
+## Contributing
 
 Please go to [Contribute section][contribute].
 

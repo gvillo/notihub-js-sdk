@@ -1,7 +1,7 @@
 {
   "name": "@notihub/notihub-nodejs-sdk",
   "version": "0.4.0",
-  "description": "Notihub Official Javascript SDK",
+  "description": "Notihub Official Node.js SDK",
   "keywords": [
     "notihub",
     "javascript",
