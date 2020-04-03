@@ -95,7 +95,7 @@ Please go to [Contribute section][contribute].
 [customer-contacts]: ./docs/customer-contacts.md
 [customer-preferences]: ./docs/customer-preferences.md
 [messages]: ./docs/messages.md
-[contribute]: ./contribute.md
+[contribute]: ./CONTRIBUTE.md
 [signup]: https://dashboard.notihub.io/signup
 [sdk-issues]: https://github.com/gvillo/notihub-nodejs-sdk/issues
 [stack-overflow]: http://stackoverflow.com/questions/tagged/notihub-nodejs-sdk
