@@ -52,7 +52,7 @@ export default class Messages {
             if (error) {
                 reject(error);
             }
-            this.api.get(this.messagesUrl, messageId)
+            this.api.get(this.messagesUrl + messageId)
                 .then(json => resolve(json))
                 .catch(error => {
                     reject(error);

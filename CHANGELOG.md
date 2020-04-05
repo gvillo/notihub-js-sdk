@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.1](https://github.com/gvillo/notihub-nodejs-sdk/releases/tag/0.4.1) (2020-04-04)
+### Breaking changes
+* Fixes Messages get url issue.
+
 ## [0.4.0](https://github.com/gvillo/notihub-nodejs-sdk/releases/tag/0.4.0) (2020-04-03)
 ### Breaking changes
 * Rewrite modules in order to be able to build this project optimized for nodejs
