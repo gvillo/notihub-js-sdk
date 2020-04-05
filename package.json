@@ -35,7 +35,7 @@
     "url": "git+https://github.com/gvillo/notihub-nodejs-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/gvillo/notihub-sdk-js/issues"
+    "url": "https://github.com/gvillo/notihub-nodejs-sdk/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
