@@ -18,7 +18,7 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "homepage": "https://github.com/gvillo/notihub-nodejs-sdk",
+  "homepage": "https://github.com/notihub-io/notihub-nodejs-sdk",
   "contributors": [
     "Gabriel Villoldo <gabrielvilloldo@gmail.com>"
   ],
@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gvillo/notihub-nodejs-sdk.git"
+    "url": "git+https://github.com/notihub-io/notihub-nodejs-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/gvillo/notihub-nodejs-sdk/issues"
+    "url": "https://github.com/notihub-io/notihub-nodejs-sdk/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

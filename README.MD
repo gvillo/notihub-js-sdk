@@ -89,7 +89,7 @@ Please go to [Contribute section][contribute].
 
 [notihub]: https://notihub.io/
 [docs-api]: https://docs.notihub.io/
-[download-release]: https://github.com/gvillo/notihub-nodejs-sdk/releases
+[download-release]: https://github.com/notihub-io/notihub-nodejs-sdk/releases
 [changes-file]: ./CHANGELOG.md
 [customers]: ./docs/customers.md
 [customer-contacts]: ./docs/customer-contacts.md
@@ -97,6 +97,6 @@ Please go to [Contribute section][contribute].
 [messages]: ./docs/messages.md
 [contribute]: ./CONTRIBUTE.md
 [signup]: https://dashboard.notihub.io/signup
-[sdk-issues]: https://github.com/gvillo/notihub-nodejs-sdk/issues
+[sdk-issues]: https://github.com/notihub-io/notihub-nodejs-sdk/issues
 [stack-overflow]: http://stackoverflow.com/questions/tagged/notihub-nodejs-sdk
-[features]: https://github.com/gvillo/notihub-nodejs-sdk/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
+[features]: https://github.com/notihub-io/notihub-nodejs-sdk/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
