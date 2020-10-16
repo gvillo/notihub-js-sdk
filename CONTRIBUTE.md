@@ -16,7 +16,7 @@ Just run `npm run build`, it will generate a `dist` folder.
 
 ### Publishing (only for Notihubers)
 
-Just run `npm run publish`.
+Just run `npm run publish` (pika will prompt to bump version).
 
 ##
 
