@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.4.2](https://github.com/notihub-io/notihub-nodejs-sdk/releases/tag/0.4.2) (2020-10-16)
+## [0.4.3](https://github.com/notihub-io/notihub-nodejs-sdk/releases/tag/0.4.3) (2020-10-16)
 ### Changes
 * Updates libraries to latest versions. Fixes dependabot alert `Bump node-fetch from 2.6.0 to 2.6.1 dependencies`
 
